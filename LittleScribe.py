@@ -10,7 +10,8 @@ class Canvas:
         self._canvas = [[' ' for y in range(self._y)] for x in range(self._x)]
 
         self.position = [0, 1]
-        # self._canvas[16][16] = 'x' ##center of the canvas
+
+        # self._canvas[int((self._x + 1) /2)][int((self._y +1) /2)] = 'x' marks centre of the canvas
 
     def hitsWall(self, point):
         return point[0] < 0 or point[0] >= self._x or point[1] < 0 or point[1] >= self._y
